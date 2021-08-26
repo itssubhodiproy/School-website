@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="nav-wrapper">
+        <div id="nav" class="navbar navbar-inverse affix-top" data-spy="affix" data-offset-top="675">
+          <div class="navbar-inner" data-spy="affix-top">
+            <div class="container">
+        
+              <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+        
+              <!-- Everything you want hidden at 940px or less, place within here -->
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#service-top">Services</a></li>
+                    <li><a href="#contact-arrow">Contact</a></li>
+                </ul><!--/.nav-->
+              </div><!--/.nav-collapse collapse pull-right-->
+            </div><!--/.container-->
+          </div><!--/.navbar-inner-->
+        </div><!--/#nav /.navbar navbar-inverse-->
+        </div><!--/#nav-wrapper-->
+
+
+
+        <script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+
+<script>
+    $(document).ready(function(e) {
+
+        $('#nav').scrollSpy()
+        $('#nav ul li a').bind('click', function(e) {
+            e.preventDefault();
+            target = this.hash;
+            console.log(target);
+            $.scrollTo(target, 1000);
+        });
+    });
+</script>
+
+</body>
+</html>
+
+    
